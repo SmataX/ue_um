@@ -3,7 +3,7 @@ import json
 from modules.point import Point
 from modules.path import Path
 
-class World:
+class Map:
     def __init__(self, name: str, seed: int, points: list[Point], paths: list[Path]):
         self.name = name
         self.seed = seed
