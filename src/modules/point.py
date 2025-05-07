@@ -1,8 +1,7 @@
 from math import sqrt, pow
 
 class Point:
-    def __init__(self, id: int, x: int, y: int):
-        self.id = id
+    def __init__(self, x: int, y: int):
         self.x = x
         self.y = y
 
@@ -14,7 +13,6 @@ class Point:
     def to_dict(self):
         # Returns point class in dict format
         return {
-            "id": self.id, 
             "x": self.x, 
             "y": self.y
         }
