@@ -19,3 +19,5 @@ if __name__ == "__main__":
 
     world = World(str(datetime.now()), 123, points, paths)
     world.save_to_file()
+
+    print(f"Distance: {paths[0].distance()}")

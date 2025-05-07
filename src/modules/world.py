@@ -20,4 +20,4 @@ class World:
     
     def save_to_file(self):
         with open(f"data/{self.name}.json", "w") as f:
-            json.dump(self.to_dict(), f, indent=4) 
+            json.dump(self.to_dict(), f, indent=2) 

@@ -6,6 +6,13 @@ class Path:
         self.end = end
         self.points = points
 
+    def distance(self) -> float:
+        dist = 0
+        for i in range(len(self.points) - 1):
+            dist += Point.distance(self.points[i], self.points[i + 1])
+        return dist
+
+
     def to_dict(self):
         return {
             "start": self.start.to_dict(), 
