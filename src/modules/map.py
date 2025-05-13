@@ -4,7 +4,7 @@ from modules.point import Point
 from modules.path import Path
 
 class Map:
-    def __init__(self, name: str, seed: int, points: list[Point], paths: list[Path]):
+    def __init__(self, name: str, seed: int, points: list[Point] = [], paths: list[Path] = []):
         self.name = name
         self.seed = seed
         self.points = points
