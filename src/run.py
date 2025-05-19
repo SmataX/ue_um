@@ -1,7 +1,7 @@
 from modules.map import Map
 from modules.path import Path
 from modules.point import Point
-from modules.path_finding import find_path
+from modules.path_finding import find_path, greedy_find_path
 from modules.draw import PathVisualizer
 
 from datetime import datetime
@@ -20,7 +20,7 @@ if __name__ == "__main__":
     map = Map(str(datetime.now()), seed, points)
 
     start, end = random.sample(points, 2)
-    best_path = find_path(map.points, start, end, 120)
+    best_path = greedy_find_path(map.points, start, end, 100)
     map.paths.append(best_path)
     map.save_to_file()
 

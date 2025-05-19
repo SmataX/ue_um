@@ -18,3 +18,32 @@ def find_path(points: list[Point], start: Point, end: Point, k: int):
             best_path = full_path
 
     return Path(start, end, best_path)
+
+
+def greedy_find_path(points: list[Point], start: Point, end: Point, k: int):
+    if k < 2:
+        raise ValueError("k must be at least 2 to include start and end")
+
+    available = [p for p in points if p != start and p != end]
+
+    if len(available) < k - 2:
+        raise ValueError(f"Not enough intermediate points to build path of length {k}")
+
+    path = [start]
+    used = set()
+
+    current = start
+
+    for _ in range(k - 2):
+        next_point = min(
+            (p for p in available if p not in used),
+            key=lambda p: Point.distance(current, p)
+        )
+        path.append(next_point)
+        used.add(next_point)
+        current = next_point
+
+    path.append(end)
+    return Path(start, end, path)
+
+
