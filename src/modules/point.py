@@ -9,10 +9,3 @@ class Point:
     def distance(p1: 'Point', p2: 'Point') -> float:
         # Returns a distance between two points
         return sqrt(pow(p2.x - p1.x, 2) + pow(p2.y - p1.y, 2))
-    
-    def to_dict(self):
-        # Returns point class in dict format
-        return {
-            "x": self.x, 
-            "y": self.y
-        }

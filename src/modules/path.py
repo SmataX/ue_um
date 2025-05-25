@@ -11,11 +11,3 @@ class Path:
         for i in range(len(self.points) - 1):
             dist += Point.distance(self.points[i], self.points[i + 1])
         return dist
-
-
-    def to_dict(self):
-        return {
-            "start": self.start.to_dict(), 
-            "end": self.end.to_dict(),
-            "points": [p.to_dict() for p in self.points]
-        }
