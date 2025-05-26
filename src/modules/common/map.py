@@ -1,7 +1,7 @@
 import os
 
-from modules.point import Point
-from modules.path import Path
+from modules.common.point import Point
+from modules.common.path import Path
 
 class Map:
     def __init__(self, name: str, points: list[Point] = None):

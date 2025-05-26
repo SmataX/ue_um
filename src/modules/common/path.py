@@ -1,4 +1,4 @@
-from modules.point import Point
+from modules.common.point import Point
 
 class Path:
     def __init__(self, start: Point, end: Point, points: list[Point]):
