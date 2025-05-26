@@ -19,6 +19,7 @@ def create_clusters(points: list[Point], cluster_size: int, map_size: int) -> li
     
     return clusters
 
+
 def get_cluster_ids_in_square_between_points(clusters: list[list[Point]], 
                                              p1: Point, p2: Point, 
                                              cluster_size: int, map_size: int) -> list[int]:
